@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        pandesal:['var(--pandesal)'],
+        tinapa:['var(--tinapa)'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

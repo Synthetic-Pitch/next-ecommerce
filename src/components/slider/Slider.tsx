@@ -14,7 +14,7 @@ const Slider: React.FC<SlideProps> = ({ open,setOpen }) => {
   
   return (
     <div
-      className={`absolute top-16  w-1/2 h-[calc(100dvh-64px)] bg-[gray] ${open?"left-0":"-left-full"} overflow-hidden transition-all duration-300 ease-in-out`}
+      className={`absolute top-16  w-1/2 h-[calc(100dvh-64px)] bg-[gray] ${open?"left-0":"-left-full"} overflow-hidden transition-all duration-300 ease-in-out z-20`}
     >
       <div 
         className="flex flex-col items-center mt-4  h-[100%] font-semibold  text-white text-xl tracking-widest"
