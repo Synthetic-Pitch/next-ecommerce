@@ -11,11 +11,15 @@ export default {
       fontFamily:{
         pandesal:['var(--pandesal)'],
         tinapa:['var(--tinapa)'],
+        kape:['var(--kape)'],
       },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens:{
+        xs:'546px'
+      }
     },
   },
   plugins: [],

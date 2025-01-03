@@ -12,3 +12,9 @@ export const customFont2 = localFont(
         variable:"--tinapa",
     }
 )
+export const customFont3 = localFont(
+    {
+        src:'../../../public/fonts/Eighty Miles.ttf',
+        variable:"--kape",
+    }
+)
