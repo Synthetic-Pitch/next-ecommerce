@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Landing-Pages/SmallScreen/Footer";
 import { Sale } from "@/components/Landing-Pages/SmallScreen/Sale";
 import { Scroll } from "@/components/Landing-Pages/SmallScreen/Scroll";
 import { SmallScreen } from "@/components/Landing-Pages/SmallScreen/SmallScreen";
@@ -12,6 +13,8 @@ export default function Home() {
         <SmallScreen/>
         <Scroll/>
         <Sale/>
+        
+        <Footer/>
       </div>
    </div>
   );

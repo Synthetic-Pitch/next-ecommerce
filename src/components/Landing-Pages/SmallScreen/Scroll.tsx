@@ -12,7 +12,7 @@ export const Scroll: React.FC = () => {
       const containerWidth = container.offsetWidth;
       const itemOffsetLeft = middleItem.offsetLeft;
       const itemWidth = middleItem.offsetWidth;
-
+      
       // Scroll to the position that centers the middle item
       const scrollLeft = itemOffsetLeft - containerWidth / 2 + itemWidth / 2;
       container.scrollTo({
@@ -36,12 +36,18 @@ export const Scroll: React.FC = () => {
       <ul className="flex items-center gap-4 w-auto h-full">
         <li className="h-[90%] w-[200px]" aria-label="Sale item 1">
           <div className="relative w-full h-full">
-            <Image src="/assets/landing-page/scroll-1.jpg" alt="" layout="fill" objectFit="fill" />
+            <Image src="/assets/landing-page/scroll-1.jpg" alt="" 
+              height={100} width={100}
+              className='w-[200px] h-[144px]'
+            />
           </div>
         </li>
         <li className="h-[90%] w-[200px]" aria-label="Sale item 2">
           <div className="relative w-full h-full">
-            <Image src="/assets/landing-page/scroll-2.jpg" alt="" layout="fill" objectFit="fill" />
+            <Image src="/assets/landing-page/scroll-2.jpg" alt="" 
+              height={100} width={100}
+              className='w-[200px] h-[144px]'
+            />
           </div> 
         </li>
         <li
@@ -50,27 +56,42 @@ export const Scroll: React.FC = () => {
           aria-label="Sale item 3"
         >
           <div className="relative w-full h-full">
-            <Image src="/assets/landing-page/scroll-3.jpg" alt="" layout="fill" objectFit="fill" />
+            <Image src="/assets/landing-page/scroll-3.jpg" alt="" 
+              height={100} width={100}
+              className='w-[200px] h-[144px]'
+            />
           </div> 
         </li>
         <li className="h-[90%] w-[200px]" aria-label="Sale item 4">
           <div className="relative w-full h-full">
-            <Image src="/assets/landing-page/scroll-4.jpg" alt="" layout="fill" objectFit="fill" />
+            <Image src="/assets/landing-page/scroll-4.jpg" alt="" 
+              height={100} width={100}
+              className='w-[200px] h-[144px]'
+            />
           </div> 
         </li>
         <li className="h-[90%] w-[200px]" aria-label="Sale item 4">
           <div className="relative w-full h-full">
-            <Image src="/assets/landing-page/scroll-5.jpg" alt="" layout="fill" objectFit="fill" />
+            <Image src="/assets/landing-page/scroll-5.jpg" alt="" 
+              height={100} width={100}
+              className='w-[200px] h-[144px]'
+            />
           </div> 
         </li>
         <li className="h-[90%] w-[200px]" aria-label="Sale item 4">
           <div className="relative w-full h-full">
-            <Image src="/assets/landing-page/scroll-6.jpg" alt="" layout="fill" objectFit="fill" />
+            <Image src="/assets/landing-page/scroll-6.jpg" alt="" 
+              height={100} width={100}
+              className='w-[200px] h-[144px]'
+            />
           </div> 
         </li>
         <li className="h-[90%] w-[200px]" aria-label="Sale item 4">
           <div className="relative w-full h-full">
-            <Image src="/assets/landing-page/scroll-7.jpg" alt="" layout="fill" objectFit="fill" />
+            <Image src="/assets/landing-page/scroll-7.jpg" alt="" 
+              height={100} width={100}
+              className='w-[200px] h-[144px]'
+            />
           </div> 
         </li>
       </ul>

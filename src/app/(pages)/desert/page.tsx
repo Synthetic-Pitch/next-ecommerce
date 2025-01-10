@@ -3,7 +3,7 @@
 const Page = () => {
   return (
     <div>
-      Beverages
+      Desert
     </div>
   );
 };
