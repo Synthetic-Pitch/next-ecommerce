@@ -1,29 +1,41 @@
-// File: app/api/employees/route.ts
 
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import ConnectionDB from '../../lib/mongodb';
+import Model from '../model/model';
 
-const employees = [
-  { id: 1, name: 'Alice' },
-  { id: 2, name: 'Bob' },
-  { id: 3, name: 'Peter' },
-  { id: 4, name: 'Carl' },
-  { id: 5, name: 'Matthew' },
-  { id: 6, name: 'Sean' },
-];
 
-// Handle GET requests
-export async function GET() {
-  return NextResponse.json({ employees });
+export async function GET(){
+  await ConnectionDB();
+  
+  try{
+    const company = await Model.find();
+    return NextResponse.json(company,{status:200})
+  }
+  catch(err){
+    console.log(`Error fetching data! ${err}`);
+    return NextResponse.json({message:"Error connecting to server"})
+  }
+
 }
 
-// Handle POST requests
-export async function POST(req: Request) {
-  try {
-    const body = await req.json();
-    employees.push(body); // Simple in-memory update
-    return NextResponse.json({ company: employees }, { status: 201 });
-  } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: 'Failed to process request' }, { status: 500 });
+export async function POST(req:NextRequest){
+  await ConnectionDB();
+
+  try{
+    const {name,email} = await req.json();
+
+    if(!name || !email){
+      return NextResponse.json(
+        {message: 'Name and email arre required!'},
+        {status:400}
+      )
+    }
+    const newCompany = await Model.create({name,email});
+    return NextResponse.json(newCompany,{status:201})
+    
+  }
+  catch(err){
+    console.log(`Error creating company ${err}`);
+    return NextResponse.json({message: 'Error creating company'},{status:500})
   }
 }
